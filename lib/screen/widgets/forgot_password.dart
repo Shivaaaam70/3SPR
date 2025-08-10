@@ -14,7 +14,7 @@ class ForgotPasswordPage extends StatelessWidget {
           // ✅ Background image
           SizedBox.expand(
             child: Image.asset(
-              'assets/images/background.jpg', // 👈 Replace with your actual asset path
+              'assets/images/background.jpg',
               fit: BoxFit.cover,
             ),
           ),

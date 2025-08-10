@@ -1,7 +1,7 @@
+import 'package:find_job/screen/views/dashboard_page.dart';
 import 'package:find_job/screen/widgets/forgot_password.dart';
 import 'package:find_job/screen/widgets/signup_page.dart';
 import 'package:flutter/material.dart';
-
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -19,7 +19,6 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: Colors.transparent,
       body: Stack(
         children: [
-          
           SizedBox.expand(
             child: Image.asset(
               'assets/images/background.jpg', 
@@ -95,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   const SizedBox(height: 12),
 
-                  // ✅ Login Button
+                  // ✅ Login Button with Navigation to Dashboard
                   SizedBox(
                     width: double.infinity,
                     height: 45,
@@ -104,7 +103,12 @@ class _LoginPageState extends State<LoginPage> {
                         backgroundColor: const Color(0xFF003B6F),
                       ),
                       onPressed: () {
-                        // TODO: Add login logic
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => const DashboardPage(),
+                          ),
+                        );
                       },
                       child: const Text("Login", style: TextStyle(fontSize: 16)),
                     ),
